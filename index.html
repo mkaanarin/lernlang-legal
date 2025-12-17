@@ -1,22 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LernLang</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 40px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        a:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .link-icon { margin-right: 10px; }
+        .contact {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact p { color: rgba(255,255,255,0.6); margin: 5px 0; }
+        .contact a {
+            display: inline;
+            background: none;
+            padding: 0;
+            color: #00d4ff;
+            border: none;
+        }
+        .contact a:hover {
+            transform: none;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">📚</div>
+    <h1>LernLang</h1>
+    <p class="subtitle">Language Learning App</p>
 
-  <!DOCTYPE html>
-  <html lang="tr">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>LernLang</title>
-      <style>
-          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f5f5f7; }
-          h1 { color: #1d1d1f; }
-          a { color: #0066cc; text-decoration: none; display: block; margin: 20px 0; padding: 15px; background: white; border-radius: 10px; }
-          a:hover { background: #e8e8ed; }
-      </style>
-  </head>
-  <body>
-      <h1>LernLang</h1>
-      <p>Dil öğrenme uygulaması</p>
-      <a href="privacy.html">Gizlilik Politikası / Privacy Policy</a>
-      <a href="terms.html">Kullanım Şartları / Terms of Service</a>
-      <p style="margin-top: 40px; color: #86868b;">İletişim: support@lernlang.app</p>
-  </body>
-  </html>
+    <a href="privacy.html">
+        <span class="link-icon">🔒</span> Privacy Policy / Gizlilik Politikası
+    </a>
+    <a href="terms.html">
+        <span class="link-icon">📋</span> Terms of Service / Kullanım Şartları
+    </a>
+
+    <div class="contact">
+        <p>Contact / İletişim</p>
+        <p><a href="mailto:support@lernlang.app">support@lernlang.app</a></p>
+    </div>
+</body>
+</html>
