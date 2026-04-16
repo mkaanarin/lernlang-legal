@@ -417,7 +417,7 @@ function submitForm(e) {
             const message = data.get('message');
             const subject = encodeURIComponent(`[LernLang Support] ${topic}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDevice: ${device}\n\n${message}`);
-            window.location.href = `mailto:destek@lernlang.app?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:support@lernlang.app?subject=${subject}&body=${body}`;
             btn.disabled = false;
             const t = translations[currentLang] || translations.en;
             btn.textContent = t.submitBtn;
@@ -430,7 +430,7 @@ function submitForm(e) {
         const message = data.get('message');
         const subject = encodeURIComponent(`[LernLang Support] ${topic}`);
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDevice: ${device}\n\n${message}`);
-        window.location.href = `mailto:destek@lernlang.app?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:support@lernlang.app?subject=${subject}&body=${body}`;
         btn.disabled = false;
         const t = translations[currentLang] || translations.en;
         btn.textContent = t.submitBtn;
