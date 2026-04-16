@@ -61,6 +61,13 @@
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
         .section { margin-bottom: 25px; }
+        .highlight {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+        }
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -70,277 +77,288 @@
         .back-link:hover { text-decoration: underline; }
         [dir="rtl"] { text-align: right; }
         [dir="rtl"] ul { padding-right: 20px; padding-left: 0; }
+        [dir="rtl"] .highlight { border-left: none; border-right: 4px solid #4caf50; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back / Geri</a>
+    <a href="index.html" class="back-link">&larr; Back / Geri</a>
 
     <div class="header">
-        <h1>🔒 Privacy Policy</h1>
-        <p class="date">Last updated: December 2024</p>
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: April 2026</p>
     </div>
 
     <div class="lang-selector">
-        <button class="lang-btn active" onclick="showLang('en')">🇬🇧 English</button>
-        <button class="lang-btn" onclick="showLang('tr')">🇹🇷 Türkçe</button>
-        <button class="lang-btn" onclick="showLang('de')">🇩🇪 Deutsch</button>
-        <button class="lang-btn" onclick="showLang('es')">🇪🇸 Español</button>
-        <button class="lang-btn" onclick="showLang('fr')">🇫🇷 Français</button>
-        <button class="lang-btn" onclick="showLang('it')">🇮🇹 Italiano</button>
-        <button class="lang-btn" onclick="showLang('ru')">🇷🇺 Русский</button>
-        <button class="lang-btn" onclick="showLang('zh')">🇨🇳 中文</button>
-        <button class="lang-btn" onclick="showLang('ar')">🇸🇦 العربية</button>
-        <button class="lang-btn" onclick="showLang('fa')">🇮🇷 فارسی</button>
-        <button class="lang-btn" onclick="showLang('ja')">🇯🇵 日本語</button>
+        <button class="lang-btn active" onclick="showLang('en')">English</button>
+        <button class="lang-btn" onclick="showLang('tr')">Turkce</button>
+        <button class="lang-btn" onclick="showLang('de')">Deutsch</button>
+        <button class="lang-btn" onclick="showLang('es')">Espanol</button>
+        <button class="lang-btn" onclick="showLang('fr')">Francais</button>
+        <button class="lang-btn" onclick="showLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="showLang('ru')">Russkiy</button>
+        <button class="lang-btn" onclick="showLang('zh')">Zhongwen</button>
+        <button class="lang-btn" onclick="showLang('ar')">al-Arabiyyah</button>
+        <button class="lang-btn" onclick="showLang('fa')">Farsi</button>
+        <button class="lang-btn" onclick="showLang('ja')">Nihongo</button>
     </div>
 
     <div class="content">
         <!-- ENGLISH -->
         <div id="en" class="lang-content active">
-            <div class="section">
-                <h2>1. Introduction</h2>
-                <p>LernLang ("we", "our", "app") respects your privacy. This policy explains what information is collected when you use our application and how it is used.</p>
+            <div class="highlight">
+                <strong>Summary:</strong> LernLang does not collect, store, or transmit any personal data to external servers. All your learning data stays on your device. We do not have user accounts, and we do not track you.
             </div>
+
             <div class="section">
-                <h2>2. Data Collected</h2>
+                <h2>1. Our Approach to Privacy</h2>
+                <p>LernLang is designed with a privacy-first approach. We believe your learning data belongs to you and should stay on your device. We do not operate any servers that store user data, and we do not require account creation or login.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Data That Stays on Your Device</h2>
+                <p>The following data is created and stored exclusively on your device:</p>
                 <ul>
-                    <li><strong>Learning Progress:</strong> Completed lessons, quiz results, and statistics are stored locally on your device.</li>
-                    <li><strong>Subscription Information:</strong> Premium purchases are processed by Apple/Google. We do not have access to your payment information.</li>
-                    <li><strong>Usage Data:</strong> We may collect anonymous usage statistics to improve app performance.</li>
-                    <li><strong>Advertising Data:</strong> In the free version, ad networks may collect data according to their own policies.</li>
+                    <li><strong>Learning progress:</strong> Completed lessons, quiz scores, and statistics</li>
+                    <li><strong>App preferences:</strong> Selected language, difficulty level, and settings</li>
+                    <li><strong>Exercise history:</strong> Your answers and performance data</li>
                 </ul>
+                <p>This data is never sent to us or any third party. If you delete the app, this data is permanently removed.</p>
             </div>
+
             <div class="section">
-                <h2>3. Use of Data</h2>
-                <p>Collected data is used to:</p>
-                <ul>
-                    <li>Provide personalized learning experience</li>
-                    <li>Improve app performance</li>
-                    <li>Diagnose technical issues</li>
-                    <li>Generate anonymous statistics for product development</li>
-                </ul>
+                <h2>3. Subscription Payments</h2>
+                <p>Premium subscriptions are processed entirely by Apple (App Store) or Google (Play Store). We never see, collect, or have access to your payment details such as credit card numbers, billing address, or bank information. For payment-related questions, please refer to Apple's or Google's privacy policies.</p>
             </div>
+
             <div class="section">
-                <h2>4. Data Storage</h2>
-                <p>Your learning data is stored locally on your device. Any data transmitted to our servers is protected with encryption.</p>
+                <h2>4. Advertisements</h2>
+                <p>The free version of LernLang displays ads through Google AdMob. The ad network may collect certain device information (such as device type and advertising identifier) to show relevant ads. Premium subscribers do not see any ads. You can limit ad tracking through your device settings (Settings > Privacy > Advertising on iOS, or Settings > Google > Ads on Android).</p>
             </div>
+
             <div class="section">
                 <h2>5. Third-Party Services</h2>
+                <p>LernLang uses the following third-party services:</p>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: Subscription processing</li>
-                    <li>Google AdMob: Ad display (free version)</li>
-                    <li>Firebase Analytics: Anonymous usage analytics</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> For subscription processing only</li>
+                    <li><strong>Google AdMob:</strong> For ad display in the free version only</li>
+                </ul>
+                <p>Each of these services has their own privacy policy. We encourage you to review them.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Children</h2>
+                <p>LernLang is a language learning app suitable for all ages. Since we do not collect any personal data, there is no personal information gathered from any user, including children. No account, email, name, or age is required to use the app.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Your Rights</h2>
+                <p>Since all data is stored locally on your device and we do not collect or process any personal data on our end, there is no data for us to access, correct, or delete on your behalf. You have full control over your data:</p>
+                <ul>
+                    <li>You can reset your progress from within the app settings</li>
+                    <li>You can delete all data by uninstalling the app</li>
                 </ul>
             </div>
-            <div class="section">
-                <h2>6. Children's Privacy</h2>
-                <p>We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us.</p>
-            </div>
-            <div class="section">
-                <h2>7. User Rights (GDPR/CCPA)</h2>
-                <p>You have the right to:</p>
-                <ul>
-                    <li>Access your data</li>
-                    <li>Request correction of your data</li>
-                    <li>Request deletion of your data</li>
-                    <li>Object to data processing</li>
-                    <li>Data portability</li>
-                </ul>
-                <p>To exercise these rights, contact: <strong>support@lernlang.app</strong></p>
-            </div>
+
             <div class="section">
                 <h2>8. Changes to This Policy</h2>
-                <p>We may update this policy from time to time. Significant changes will be notified through the app.</p>
+                <p>If we update this policy, the changes will be reflected on this page with an updated date. Significant changes will be communicated through the app.</p>
             </div>
+
             <div class="section">
                 <h2>9. Contact</h2>
-                <p>For questions or concerns: <strong>support@lernlang.app</strong></p>
+                <p>If you have any questions about this privacy policy, contact us at: <strong>support@lernlang.app</strong></p>
             </div>
         </div>
 
         <!-- TURKISH -->
         <div id="tr" class="lang-content">
-            <div class="section">
-                <h2>1. Giriş</h2>
-                <p>LernLang ("biz", "uygulama") olarak gizliliğinize saygı duyuyoruz. Bu politika, uygulamamızı kullanırken hangi bilgilerin toplandığını ve nasıl kullanıldığını açıklar.</p>
+            <div class="highlight">
+                <strong>Ozet:</strong> LernLang hicbir kisisel veriyi harici sunuculara toplamaz, saklamaz veya iletmez. Tum ogrenme verileriniz cihazinizda kalir. Kullanici hesabi yoktur ve sizi takip etmiyoruz.
             </div>
+
             <div class="section">
-                <h2>2. Toplanan Veriler</h2>
+                <h2>1. Gizlillige Yaklasimimiz</h2>
+                <p>LernLang, gizlilik oncelikli bir yaklasimla tasarlanmistir. Ogrenme verilerinizin size ait olduguna ve cihazinizda kalmasi gerektigine inaniyoruz. Kullanici verilerini saklayan herhangi bir sunucu isletmiyoruz ve hesap olusturma veya giris gerektirmiyoruz.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Cihazinizda Kalan Veriler</h2>
+                <p>Asagidaki veriler yalnizca cihazinizda olusturulur ve saklanir:</p>
                 <ul>
-                    <li><strong>Öğrenme İlerlemesi:</strong> Tamamladığınız dersler, quiz sonuçları ve istatistikler cihazınızda yerel olarak saklanır.</li>
-                    <li><strong>Abonelik Bilgileri:</strong> Premium satın alımlar Apple/Google tarafından işlenir. Ödeme bilgilerinize erişimimiz yoktur.</li>
-                    <li><strong>Kullanım Verileri:</strong> Uygulama performansını iyileştirmek için anonim kullanım istatistikleri toplayabiliriz.</li>
-                    <li><strong>Reklam Verileri:</strong> Ücretsiz sürümde reklam ağları kendi politikalarına göre veri toplayabilir.</li>
+                    <li><strong>Ogrenme ilerlemesi:</strong> Tamamlanan dersler, quiz puanlari ve istatistikler</li>
+                    <li><strong>Uygulama tercihleri:</strong> Secilen dil, zorluk seviyesi ve ayarlar</li>
+                    <li><strong>Alistirma gecmisi:</strong> Yanitlariniz ve performans verileriniz</li>
+                </ul>
+                <p>Bu veriler asla bize veya ucuncu taraflara gonderilmez. Uygulamayi silerseniz bu veriler kalici olarak silinir.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Abonelik Odemeleri</h2>
+                <p>Premium abonelikler tamamen Apple (App Store) veya Google (Play Store) tarafindan islenir. Kredi karti numaralari, fatura adresi veya banka bilgileri gibi odeme detaylarinizi asla gormeyiz, toplamayiz veya erisim saglamayiz.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Reklamlar</h2>
+                <p>LernLang'in ucretsiz surumu Google AdMob araciligiyla reklam gosterir. Reklam agi, ilgili reklamlar gostermek icin belirli cihaz bilgilerini (cihaz turu ve reklam tanimlayicisi gibi) toplayabilir. Premium aboneler hicbir reklam gormez. Cihaz ayarlarinizdan reklam takibini sinirlandiabilirsiniz.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Ucuncu Taraf Hizmetleri</h2>
+                <p>LernLang asagidaki ucuncu taraf hizmetlerini kullanir:</p>
+                <ul>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Yalnizca abonelik islemleri icin</li>
+                    <li><strong>Google AdMob:</strong> Yalnizca ucretsiz surumde reklam gosterimi icin</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>3. Verilerin Kullanımı</h2>
-                <p>Toplanan veriler şu amaçlarla kullanılır:</p>
+                <h2>6. Cocuklar</h2>
+                <p>LernLang tum yaslara uygun bir dil ogrenme uygulamasidir. Hicbir kisisel veri toplamadigimiz icin, cocuklar dahil hicbir kullanicidan kisisel bilgi alinmaz. Uygulamayi kullanmak icin hesap, e-posta, isim veya yas gerekmez.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Haklariniz</h2>
+                <p>Tum veriler cihazinizda yerel olarak saklaniyor ve biz hicbir kisisel veri toplamiyor veya islemiyor oldugumuzdann, sizin adiniiza eriseek, duzeltecek veya silecek bir veri bulunmamaktadir. Verileriniz uzerinde tam kontrol sizde:</p>
                 <ul>
-                    <li>Kişiselleştirilmiş öğrenme deneyimi sunmak</li>
-                    <li>Uygulama performansını iyileştirmek</li>
-                    <li>Teknik sorunları teşhis etmek</li>
-                    <li>Ürün geliştirme için anonim istatistikler oluşturmak</li>
+                    <li>Ilerlemenizi uygulama ayarlarindan sifirlayabilirsiniz</li>
+                    <li>Uygulamayi kaldirarak tum verileri silebilirsiniz</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>4. Veri Saklama</h2>
-                <p>Öğrenme verileriniz cihazınızda yerel olarak saklanır. Sunucularımıza iletilen veriler şifreleme ile korunur.</p>
+                <h2>8. Politika Degisiklikleri</h2>
+                <p>Bu politikayi guncellesek, degisiklikler bu sayfada guncel tarihle yansitilacaktir. Onemli degisiklikler uygulama icinden bildirilecektir.</p>
             </div>
+
             <div class="section">
-                <h2>5. Üçüncü Taraf Hizmetleri</h2>
-                <ul>
-                    <li>Apple StoreKit / Google Play Billing: Abonelik işlemleri</li>
-                    <li>Google AdMob: Reklam gösterimi (ücretsiz sürüm)</li>
-                    <li>Firebase Analytics: Anonim kullanım analitiği</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>6. Çocukların Gizliliği</h2>
-                <p>13 yaşından küçük çocuklardan bilerek kişisel bilgi toplamıyoruz. Böyle bir bilgi topladığımızı düşünüyorsanız lütfen bizimle iletişime geçin.</p>
-            </div>
-            <div class="section">
-                <h2>7. Kullanıcı Hakları (KVKK/GDPR)</h2>
-                <p>Aşağıdaki haklara sahipsiniz:</p>
-                <ul>
-                    <li>Verilerinize erişim hakkı</li>
-                    <li>Verilerinizin düzeltilmesini talep etme hakkı</li>
-                    <li>Verilerinizin silinmesini talep etme hakkı</li>
-                    <li>Veri işlemeye itiraz etme hakkı</li>
-                    <li>Veri taşınabilirliği hakkı</li>
-                </ul>
-                <p>Bu haklarınızı kullanmak için: <strong>support@lernlang.app</strong></p>
-            </div>
-            <div class="section">
-                <h2>8. Politika Değişiklikleri</h2>
-                <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içinden bildirilecektir.</p>
-            </div>
-            <div class="section">
-                <h2>9. İletişim</h2>
-                <p>Sorularınız için: <strong>support@lernlang.app</strong></p>
+                <h2>9. Iletisim</h2>
+                <p>Bu gizlilik politikasi hakkinda sorulariniz icin: <strong>support@lernlang.app</strong></p>
             </div>
         </div>
 
         <!-- GERMAN -->
         <div id="de" class="lang-content">
-            <div class="section">
-                <h2>1. Einleitung</h2>
-                <p>LernLang ("wir", "unsere", "App") respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche Informationen bei der Nutzung unserer Anwendung gesammelt werden und wie sie verwendet werden.</p>
+            <div class="highlight">
+                <strong>Zusammenfassung:</strong> LernLang sammelt, speichert oder ubertragt keine personenbezogenen Daten an externe Server. Alle Ihre Lerndaten bleiben auf Ihrem Gerat. Wir haben keine Benutzerkonten und verfolgen Sie nicht.
             </div>
+
             <div class="section">
-                <h2>2. Gesammelte Daten</h2>
+                <h2>1. Unser Ansatz zum Datenschutz</h2>
+                <p>LernLang wurde mit einem Privacy-First-Ansatz entwickelt. Wir glauben, dass Ihre Lerndaten Ihnen gehoren und auf Ihrem Gerat bleiben sollten. Wir betreiben keine Server, die Benutzerdaten speichern, und wir erfordern keine Kontoerstellung oder Anmeldung.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Daten, die auf Ihrem Gerat bleiben</h2>
+                <p>Die folgenden Daten werden ausschliesslich auf Ihrem Gerat erstellt und gespeichert:</p>
                 <ul>
-                    <li><strong>Lernfortschritt:</strong> Abgeschlossene Lektionen, Quiz-Ergebnisse und Statistiken werden lokal auf Ihrem Gerät gespeichert.</li>
-                    <li><strong>Abonnement-Informationen:</strong> Premium-Käufe werden von Apple/Google verarbeitet. Wir haben keinen Zugang zu Ihren Zahlungsinformationen.</li>
-                    <li><strong>Nutzungsdaten:</strong> Wir können anonyme Nutzungsstatistiken sammeln, um die App-Leistung zu verbessern.</li>
-                    <li><strong>Werbedaten:</strong> In der kostenlosen Version können Werbenetzwerke gemäß ihren eigenen Richtlinien Daten sammeln.</li>
+                    <li><strong>Lernfortschritt:</strong> Abgeschlossene Lektionen, Quiz-Ergebnisse und Statistiken</li>
+                    <li><strong>App-Einstellungen:</strong> Gewahlte Sprache, Schwierigkeitsgrad und Einstellungen</li>
+                    <li><strong>Ubungsverlauf:</strong> Ihre Antworten und Leistungsdaten</li>
+                </ul>
+                <p>Diese Daten werden niemals an uns oder Dritte gesendet. Wenn Sie die App loschen, werden diese Daten dauerhaft entfernt.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Abonnement-Zahlungen</h2>
+                <p>Premium-Abonnements werden vollstandig von Apple (App Store) oder Google (Play Store) abgewickelt. Wir sehen, sammeln oder haben keinen Zugang zu Ihren Zahlungsdaten wie Kreditkartennummern, Rechnungsadresse oder Bankinformationen.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Werbung</h2>
+                <p>Die kostenlose Version von LernLang zeigt Werbung uber Google AdMob an. Das Werbenetzwerk kann bestimmte Gerateinformationen sammeln, um relevante Werbung anzuzeigen. Premium-Abonnenten sehen keine Werbung. Sie konnen das Ad-Tracking uber Ihre Gerateeinstellungen einschranken.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Dienste Dritter</h2>
+                <ul>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Nur fur die Abonnementverarbeitung</li>
+                    <li><strong>Google AdMob:</strong> Nur fur Werbeanzeigen in der kostenlosen Version</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>3. Verwendung der Daten</h2>
-                <p>Gesammelte Daten werden verwendet für:</p>
+                <h2>6. Kinder</h2>
+                <p>LernLang ist eine Sprachlern-App, die fur alle Altersgruppen geeignet ist. Da wir keine personenbezogenen Daten sammeln, werden von keinem Benutzer, einschliesslich Kindern, personliche Informationen erfasst. Kein Konto, keine E-Mail, kein Name oder Alter ist erforderlich.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Ihre Rechte</h2>
+                <p>Da alle Daten lokal auf Ihrem Gerat gespeichert werden und wir keine personenbezogenen Daten verarbeiten, gibt es keine Daten, auf die wir in Ihrem Namen zugreifen, korrigieren oder loschen konnten. Sie haben die volle Kontrolle:</p>
                 <ul>
-                    <li>Personalisierte Lernerfahrung</li>
-                    <li>Verbesserung der App-Leistung</li>
-                    <li>Diagnose technischer Probleme</li>
-                    <li>Anonyme Statistiken für Produktentwicklung</li>
+                    <li>Sie konnen Ihren Fortschritt in den App-Einstellungen zurucksetzen</li>
+                    <li>Sie konnen alle Daten loschen, indem Sie die App deinstallieren</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>4. Datenspeicherung</h2>
-                <p>Ihre Lerndaten werden lokal auf Ihrem Gerät gespeichert. Alle an unsere Server übertragenen Daten sind verschlüsselt.</p>
+                <h2>8. Anderungen</h2>
+                <p>Wenn wir diese Richtlinie aktualisieren, werden die Anderungen auf dieser Seite widergespiegelt. Wesentliche Anderungen werden uber die App mitgeteilt.</p>
             </div>
-            <div class="section">
-                <h2>5. Drittanbieter-Dienste</h2>
-                <ul>
-                    <li>Apple StoreKit / Google Play Billing: Abonnement-Verarbeitung</li>
-                    <li>Google AdMob: Werbeanzeigen (kostenlose Version)</li>
-                    <li>Firebase Analytics: Anonyme Nutzungsanalyse</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>6. Datenschutz für Kinder</h2>
-                <p>Wir sammeln wissentlich keine persönlichen Daten von Kindern unter 13 Jahren.</p>
-            </div>
-            <div class="section">
-                <h2>7. Benutzerrechte (DSGVO)</h2>
-                <p>Sie haben das Recht auf:</p>
-                <ul>
-                    <li>Zugang zu Ihren Daten</li>
-                    <li>Berichtigung Ihrer Daten</li>
-                    <li>Löschung Ihrer Daten</li>
-                    <li>Widerspruch gegen Datenverarbeitung</li>
-                    <li>Datenübertragbarkeit</li>
-                </ul>
-                <p>Kontakt: <strong>support@lernlang.app</strong></p>
-            </div>
-            <div class="section">
-                <h2>8. Änderungen</h2>
-                <p>Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Wesentliche Änderungen werden über die App mitgeteilt.</p>
-            </div>
+
             <div class="section">
                 <h2>9. Kontakt</h2>
-                <p>Bei Fragen: <strong>support@lernlang.app</strong></p>
+                <p>Bei Fragen zu dieser Datenschutzrichtlinie: <strong>support@lernlang.app</strong></p>
             </div>
         </div>
 
         <!-- SPANISH -->
         <div id="es" class="lang-content">
-            <div class="section">
-                <h2>1. Introducción</h2>
-                <p>LernLang ("nosotros", "nuestra", "aplicación") respeta su privacidad. Esta política explica qué información se recopila cuando utiliza nuestra aplicación y cómo se utiliza.</p>
+            <div class="highlight">
+                <strong>Resumen:</strong> LernLang no recopila, almacena ni transmite datos personales a servidores externos. Todos tus datos de aprendizaje permanecen en tu dispositivo. No tenemos cuentas de usuario y no te rastreamos.
             </div>
+
             <div class="section">
-                <h2>2. Datos Recopilados</h2>
+                <h2>1. Nuestro Enfoque de Privacidad</h2>
+                <p>LernLang esta disenado con un enfoque de privacidad primero. Creemos que tus datos de aprendizaje te pertenecen y deben permanecer en tu dispositivo. No operamos servidores que almacenen datos de usuarios y no requerimos creacion de cuenta o inicio de sesion.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Datos que Permanecen en tu Dispositivo</h2>
                 <ul>
-                    <li><strong>Progreso de Aprendizaje:</strong> Las lecciones completadas, resultados de cuestionarios y estadísticas se almacenan localmente en su dispositivo.</li>
-                    <li><strong>Información de Suscripción:</strong> Las compras premium son procesadas por Apple/Google. No tenemos acceso a su información de pago.</li>
-                    <li><strong>Datos de Uso:</strong> Podemos recopilar estadísticas de uso anónimas para mejorar el rendimiento de la aplicación.</li>
-                    <li><strong>Datos de Publicidad:</strong> En la versión gratuita, las redes publicitarias pueden recopilar datos según sus propias políticas.</li>
+                    <li><strong>Progreso de aprendizaje:</strong> Lecciones completadas, puntuaciones y estadisticas</li>
+                    <li><strong>Preferencias de la app:</strong> Idioma seleccionado, nivel de dificultad y ajustes</li>
+                    <li><strong>Historial de ejercicios:</strong> Tus respuestas y datos de rendimiento</li>
                 </ul>
+                <p>Estos datos nunca se envian a nosotros ni a terceros. Si eliminas la app, estos datos se borran permanentemente.</p>
             </div>
+
             <div class="section">
-                <h2>3. Uso de Datos</h2>
-                <p>Los datos recopilados se utilizan para:</p>
-                <ul>
-                    <li>Proporcionar experiencia de aprendizaje personalizada</li>
-                    <li>Mejorar el rendimiento de la aplicación</li>
-                    <li>Diagnosticar problemas técnicos</li>
-                    <li>Generar estadísticas anónimas</li>
-                </ul>
+                <h2>3. Pagos de Suscripcion</h2>
+                <p>Las suscripciones premium son procesadas completamente por Apple (App Store) o Google (Play Store). Nunca vemos, recopilamos ni tenemos acceso a tus datos de pago.</p>
             </div>
+
             <div class="section">
-                <h2>4. Almacenamiento de Datos</h2>
-                <p>Sus datos de aprendizaje se almacenan localmente en su dispositivo. Los datos transmitidos a nuestros servidores están protegidos con cifrado.</p>
+                <h2>4. Publicidad</h2>
+                <p>La version gratuita muestra anuncios a traves de Google AdMob. La red publicitaria puede recopilar cierta informacion del dispositivo para mostrar anuncios relevantes. Los suscriptores premium no ven anuncios. Puedes limitar el seguimiento de anuncios en la configuracion de tu dispositivo.</p>
             </div>
+
             <div class="section">
                 <h2>5. Servicios de Terceros</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: Procesamiento de suscripciones</li>
-                    <li>Google AdMob: Visualización de anuncios (versión gratuita)</li>
-                    <li>Firebase Analytics: Análisis de uso anónimo</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Solo para procesamiento de suscripciones</li>
+                    <li><strong>Google AdMob:</strong> Solo para anuncios en la version gratuita</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. Privacidad de los Niños</h2>
-                <p>No recopilamos conscientemente información personal de niños menores de 13 años.</p>
+                <h2>6. Ninos</h2>
+                <p>LernLang es una app de aprendizaje de idiomas apta para todas las edades. Como no recopilamos datos personales, no se obtiene informacion personal de ningun usuario, incluidos ninos. No se requiere cuenta, correo electronico, nombre ni edad.</p>
             </div>
+
             <div class="section">
-                <h2>7. Derechos del Usuario (RGPD)</h2>
-                <p>Usted tiene derecho a:</p>
+                <h2>7. Tus Derechos</h2>
+                <p>Como todos los datos se almacenan localmente en tu dispositivo, tienes control total:</p>
                 <ul>
-                    <li>Acceder a sus datos</li>
-                    <li>Solicitar la corrección de sus datos</li>
-                    <li>Solicitar la eliminación de sus datos</li>
-                    <li>Oponerse al procesamiento de datos</li>
-                    <li>Portabilidad de datos</li>
+                    <li>Puedes restablecer tu progreso desde los ajustes de la app</li>
+                    <li>Puedes eliminar todos los datos desinstalando la app</li>
                 </ul>
-                <p>Contacto: <strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. Cambios</h2>
-                <p>Podemos actualizar esta política periódicamente. Los cambios importantes se notificarán a través de la aplicación.</p>
+                <p>Si actualizamos esta politica, los cambios se reflejaran en esta pagina. Los cambios importantes se comunicaran a traves de la app.</p>
             </div>
+
             <div class="section">
                 <h2>9. Contacto</h2>
                 <p>Para preguntas: <strong>support@lernlang.app</strong></p>
@@ -349,61 +367,62 @@
 
         <!-- FRENCH -->
         <div id="fr" class="lang-content">
-            <div class="section">
-                <h2>1. Introduction</h2>
-                <p>LernLang ("nous", "notre", "application") respecte votre vie privée. Cette politique explique quelles informations sont collectées lorsque vous utilisez notre application et comment elles sont utilisées.</p>
+            <div class="highlight">
+                <strong>Resume:</strong> LernLang ne collecte, ne stocke et ne transmet aucune donnee personnelle a des serveurs externes. Toutes vos donnees d'apprentissage restent sur votre appareil. Nous n'avons pas de comptes utilisateur et ne vous suivons pas.
             </div>
+
             <div class="section">
-                <h2>2. Données Collectées</h2>
+                <h2>1. Notre Approche de la Confidentialite</h2>
+                <p>LernLang est concu avec une approche axee sur la confidentialite. Nous croyons que vos donnees d'apprentissage vous appartiennent et doivent rester sur votre appareil. Nous n'exploitons aucun serveur stockant des donnees utilisateur et ne necessitions aucune creation de compte.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Donnees qui Restent sur Votre Appareil</h2>
                 <ul>
-                    <li><strong>Progression d'Apprentissage:</strong> Les leçons terminées, résultats de quiz et statistiques sont stockés localement sur votre appareil.</li>
-                    <li><strong>Informations d'Abonnement:</strong> Les achats premium sont traités par Apple/Google. Nous n'avons pas accès à vos informations de paiement.</li>
-                    <li><strong>Données d'Utilisation:</strong> Nous pouvons collecter des statistiques d'utilisation anonymes pour améliorer les performances de l'application.</li>
-                    <li><strong>Données Publicitaires:</strong> Dans la version gratuite, les réseaux publicitaires peuvent collecter des données selon leurs propres politiques.</li>
+                    <li><strong>Progression d'apprentissage:</strong> Lecons terminees, scores et statistiques</li>
+                    <li><strong>Preferences de l'app:</strong> Langue selectionnee, niveau de difficulte et parametres</li>
+                    <li><strong>Historique des exercices:</strong> Vos reponses et donnees de performance</li>
                 </ul>
+                <p>Ces donnees ne sont jamais envoyees a nous ou a des tiers. Si vous supprimez l'app, ces donnees sont definitivement effacees.</p>
             </div>
+
             <div class="section">
-                <h2>3. Utilisation des Données</h2>
-                <p>Les données collectées sont utilisées pour:</p>
-                <ul>
-                    <li>Fournir une expérience d'apprentissage personnalisée</li>
-                    <li>Améliorer les performances de l'application</li>
-                    <li>Diagnostiquer les problèmes techniques</li>
-                    <li>Générer des statistiques anonymes</li>
-                </ul>
+                <h2>3. Paiements d'Abonnement</h2>
+                <p>Les abonnements premium sont traites entierement par Apple (App Store) ou Google (Play Store). Nous ne voyons, ne collectons ni n'avons acces a vos informations de paiement.</p>
             </div>
+
             <div class="section">
-                <h2>4. Stockage des Données</h2>
-                <p>Vos données d'apprentissage sont stockées localement sur votre appareil. Les données transmises à nos serveurs sont protégées par cryptage.</p>
+                <h2>4. Publicites</h2>
+                <p>La version gratuite affiche des publicites via Google AdMob. Le reseau publicitaire peut collecter certaines informations de l'appareil pour afficher des publicites pertinentes. Les abonnes premium ne voient aucune publicite.</p>
             </div>
+
             <div class="section">
                 <h2>5. Services Tiers</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: Traitement des abonnements</li>
-                    <li>Google AdMob: Affichage des publicités (version gratuite)</li>
-                    <li>Firebase Analytics: Analyse d'utilisation anonyme</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Uniquement pour le traitement des abonnements</li>
+                    <li><strong>Google AdMob:</strong> Uniquement pour l'affichage des publicites dans la version gratuite</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. Confidentialité des Enfants</h2>
-                <p>Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans.</p>
+                <h2>6. Enfants</h2>
+                <p>LernLang est une application d'apprentissage des langues adaptee a tous les ages. Comme nous ne collectons aucune donnee personnelle, aucune information personnelle n'est recueillie aupres d'aucun utilisateur, y compris les enfants. Aucun compte, e-mail, nom ou age n'est requis.</p>
             </div>
+
             <div class="section">
-                <h2>7. Droits des Utilisateurs (RGPD)</h2>
-                <p>Vous avez le droit de:</p>
+                <h2>7. Vos Droits</h2>
+                <p>Toutes les donnees etant stockees localement sur votre appareil, vous avez un controle total:</p>
                 <ul>
-                    <li>Accéder à vos données</li>
-                    <li>Demander la correction de vos données</li>
-                    <li>Demander la suppression de vos données</li>
-                    <li>Vous opposer au traitement des données</li>
-                    <li>Portabilité des données</li>
+                    <li>Vous pouvez reinitialiser votre progression dans les parametres de l'app</li>
+                    <li>Vous pouvez supprimer toutes les donnees en desinstallant l'app</li>
                 </ul>
-                <p>Contact: <strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. Modifications</h2>
-                <p>Nous pouvons mettre à jour cette politique de temps en temps. Les changements importants seront notifiés via l'application.</p>
+                <p>Si nous mettons a jour cette politique, les modifications seront refletees sur cette page. Les changements importants seront communiques via l'app.</p>
             </div>
+
             <div class="section">
                 <h2>9. Contact</h2>
                 <p>Pour toute question: <strong>support@lernlang.app</strong></p>
@@ -412,61 +431,62 @@
 
         <!-- ITALIAN -->
         <div id="it" class="lang-content">
-            <div class="section">
-                <h2>1. Introduzione</h2>
-                <p>LernLang ("noi", "nostra", "app") rispetta la tua privacy. Questa politica spiega quali informazioni vengono raccolte quando utilizzi la nostra applicazione e come vengono utilizzate.</p>
+            <div class="highlight">
+                <strong>Riepilogo:</strong> LernLang non raccoglie, archivia o trasmette dati personali a server esterni. Tutti i tuoi dati di apprendimento rimangono sul tuo dispositivo. Non abbiamo account utente e non ti tracciamo.
             </div>
+
             <div class="section">
-                <h2>2. Dati Raccolti</h2>
+                <h2>1. Il Nostro Approccio alla Privacy</h2>
+                <p>LernLang e progettato con un approccio incentrato sulla privacy. Crediamo che i tuoi dati di apprendimento appartengano a te e debbano rimanere sul tuo dispositivo. Non gestiamo server che memorizzano dati utente e non richiediamo la creazione di account.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Dati che Rimangono sul Tuo Dispositivo</h2>
                 <ul>
-                    <li><strong>Progressi di Apprendimento:</strong> Le lezioni completate, i risultati dei quiz e le statistiche sono memorizzati localmente sul tuo dispositivo.</li>
-                    <li><strong>Informazioni sull'Abbonamento:</strong> Gli acquisti premium sono elaborati da Apple/Google. Non abbiamo accesso alle tue informazioni di pagamento.</li>
-                    <li><strong>Dati di Utilizzo:</strong> Potremmo raccogliere statistiche di utilizzo anonime per migliorare le prestazioni dell'app.</li>
-                    <li><strong>Dati Pubblicitari:</strong> Nella versione gratuita, le reti pubblicitarie possono raccogliere dati secondo le proprie politiche.</li>
+                    <li><strong>Progressi di apprendimento:</strong> Lezioni completate, punteggi e statistiche</li>
+                    <li><strong>Preferenze dell'app:</strong> Lingua selezionata, livello di difficolta e impostazioni</li>
+                    <li><strong>Cronologia esercizi:</strong> Le tue risposte e dati sulle prestazioni</li>
                 </ul>
+                <p>Questi dati non vengono mai inviati a noi o a terze parti. Se elimini l'app, questi dati vengono rimossi permanentemente.</p>
             </div>
+
             <div class="section">
-                <h2>3. Utilizzo dei Dati</h2>
-                <p>I dati raccolti sono utilizzati per:</p>
-                <ul>
-                    <li>Fornire un'esperienza di apprendimento personalizzata</li>
-                    <li>Migliorare le prestazioni dell'app</li>
-                    <li>Diagnosticare problemi tecnici</li>
-                    <li>Generare statistiche anonime</li>
-                </ul>
+                <h2>3. Pagamenti dell'Abbonamento</h2>
+                <p>Gli abbonamenti premium sono elaborati interamente da Apple (App Store) o Google (Play Store). Non vediamo, raccogliamo o abbiamo accesso ai tuoi dati di pagamento.</p>
             </div>
+
             <div class="section">
-                <h2>4. Archiviazione dei Dati</h2>
-                <p>I tuoi dati di apprendimento sono memorizzati localmente sul tuo dispositivo. I dati trasmessi ai nostri server sono protetti con crittografia.</p>
+                <h2>4. Pubblicita</h2>
+                <p>La versione gratuita mostra annunci tramite Google AdMob. La rete pubblicitaria puo raccogliere determinate informazioni del dispositivo per mostrare annunci pertinenti. Gli abbonati premium non vedono annunci.</p>
             </div>
+
             <div class="section">
                 <h2>5. Servizi di Terze Parti</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: Elaborazione abbonamenti</li>
-                    <li>Google AdMob: Visualizzazione annunci (versione gratuita)</li>
-                    <li>Firebase Analytics: Analisi di utilizzo anonima</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Solo per l'elaborazione degli abbonamenti</li>
+                    <li><strong>Google AdMob:</strong> Solo per la visualizzazione di annunci nella versione gratuita</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. Privacy dei Bambini</h2>
-                <p>Non raccogliamo consapevolmente informazioni personali da bambini di età inferiore ai 13 anni.</p>
+                <h2>6. Bambini</h2>
+                <p>LernLang e un'app per l'apprendimento delle lingue adatta a tutte le eta. Poiche non raccogliamo dati personali, nessuna informazione personale viene raccolta da alcun utente, compresi i bambini. Non sono richiesti account, e-mail, nome o eta.</p>
             </div>
+
             <div class="section">
-                <h2>7. Diritti degli Utenti (GDPR)</h2>
-                <p>Hai il diritto di:</p>
+                <h2>7. I Tuoi Diritti</h2>
+                <p>Poiche tutti i dati sono memorizzati localmente sul tuo dispositivo, hai il pieno controllo:</p>
                 <ul>
-                    <li>Accedere ai tuoi dati</li>
-                    <li>Richiedere la correzione dei tuoi dati</li>
-                    <li>Richiedere la cancellazione dei tuoi dati</li>
-                    <li>Opporti al trattamento dei dati</li>
-                    <li>Portabilità dei dati</li>
+                    <li>Puoi reimpostare i tuoi progressi dalle impostazioni dell'app</li>
+                    <li>Puoi eliminare tutti i dati disinstallando l'app</li>
                 </ul>
-                <p>Contatto: <strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. Modifiche</h2>
-                <p>Potremmo aggiornare questa politica di tanto in tanto. Le modifiche importanti saranno notificate tramite l'app.</p>
+                <p>Se aggiorniamo questa politica, le modifiche saranno riflesse in questa pagina. I cambiamenti importanti saranno comunicati tramite l'app.</p>
             </div>
+
             <div class="section">
                 <h2>9. Contatto</h2>
                 <p>Per domande: <strong>support@lernlang.app</strong></p>
@@ -475,124 +495,126 @@
 
         <!-- RUSSIAN -->
         <div id="ru" class="lang-content">
-            <div class="section">
-                <h2>1. Введение</h2>
-                <p>LernLang ("мы", "наш", "приложение") уважает вашу конфиденциальность. Эта политика объясняет, какая информация собирается при использовании нашего приложения и как она используется.</p>
+            <div class="highlight">
+                <strong>Kratko:</strong> LernLang ne sobiraet, ne khranit i ne peredaet lichnye dannye na vneshnie servery. Vse vashi dannye ob obuchenii ostayutsya na vashem ustroystve. U nas net uchetnykh zapisey polzovateley, i my ne otslezhivaem vas.
             </div>
+
             <div class="section">
-                <h2>2. Собираемые данные</h2>
+                <h2>1. Nash podkhod k konfidentsialnosti</h2>
+                <p>LernLang razrabotan s prioritetom konfidentsialnosti. My schitaem, chto vashi dannye ob obuchenii prinadlezhat vam i dolzhny ostavatsya na vashem ustroystve. My ne ekspluatiruem servery, khranyashchie dannye polzovateley, i ne trebuem sozdaniya uchetnoy zapisi.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Dannye, kotorye ostayutsya na vashem ustroystve</h2>
                 <ul>
-                    <li><strong>Прогресс обучения:</strong> Завершенные уроки, результаты тестов и статистика хранятся локально на вашем устройстве.</li>
-                    <li><strong>Информация о подписке:</strong> Премиум-покупки обрабатываются Apple/Google. У нас нет доступа к вашей платежной информации.</li>
-                    <li><strong>Данные об использовании:</strong> Мы можем собирать анонимную статистику использования для улучшения производительности приложения.</li>
-                    <li><strong>Рекламные данные:</strong> В бесплатной версии рекламные сети могут собирать данные в соответствии со своими политиками.</li>
+                    <li><strong>Progress obucheniya:</strong> Zavershennye uroki, rezultaty testov i statistika</li>
+                    <li><strong>Nastroyki prilozheniya:</strong> Vybrannyy yazyk, uroven slozhnosti i parametry</li>
+                    <li><strong>Istoriya uprazhneniy:</strong> Vashi otvety i dannye o proizvoditelnosti</li>
+                </ul>
+                <p>Eti dannye nikogda ne otpravlyayutsya nam ili tretim storonam. Esli vy udalite prilozhenie, eti dannye budut okonchatelno udaleny.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Platezhi za podpisku</h2>
+                <p>Premiumm-podpiski obrabatyvantsya polnostyu Apple (App Store) ili Google (Play Store). My nikogda ne vidim, ne sobiraem i ne imeem dostupa k vashim platezhnym dannym.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Reklama</h2>
+                <p>Besplatnaya versiya pokazyvaet reklamu cherez Google AdMob. Reklamnaya set mozhet sobirat opredelennuyu informatsiyu ob ustroystve dlya pokaza sootvetstvuyushchey reklamy. Premium-podpischiki ne vidyat reklamu.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Servisy tretikh storon</h2>
+                <ul>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Tolko dlya obrabotki podpisok</li>
+                    <li><strong>Google AdMob:</strong> Tolko dlya pokaza reklamy v besplatnoy versii</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>3. Использование данных</h2>
-                <p>Собранные данные используются для:</p>
+                <h2>6. Deti</h2>
+                <p>LernLang - eto prilozhenie dlya izucheniya yazykov, podkhodyashchee dlya vsekh vozrastov. Poskolku my ne sobiraem nikakikh lichnykh dannykh, nikakaya lichnaya informatsiya ne sobiraaetsya ni ot odnogo polzovatelya, vklyuchaya detey. Dlya ispolzovaniya prilozheniya ne trebuetsya uchetnaya zapis, elektronnaya pochta, imya ili vozrast.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Vashi prava</h2>
+                <p>Poskolku vse dannye khranyatsya lokalno na vashem ustroystve, u vas est polnyy kontrol:</p>
                 <ul>
-                    <li>Предоставления персонализированного опыта обучения</li>
-                    <li>Улучшения производительности приложения</li>
-                    <li>Диагностики технических проблем</li>
-                    <li>Создания анонимной статистики</li>
+                    <li>Vy mozhete sbrosit progress v nastroykakh prilozheniya</li>
+                    <li>Vy mozhete udalit vse dannye, udaliv prilozhenie</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>4. Хранение данных</h2>
-                <p>Ваши данные обучения хранятся локально на вашем устройстве. Данные, передаваемые на наши серверы, защищены шифрованием.</p>
+                <h2>8. Izmeneniya</h2>
+                <p>Esli my obnovim etu politiku, izmeneniya budut otrazheny na etoy stranitse. O sushchestvennykh izmeneniyakh budet soobshcheno cherez prilozhenie.</p>
             </div>
+
             <div class="section">
-                <h2>5. Сторонние сервисы</h2>
-                <ul>
-                    <li>Apple StoreKit / Google Play Billing: Обработка подписок</li>
-                    <li>Google AdMob: Показ рекламы (бесплатная версия)</li>
-                    <li>Firebase Analytics: Анонимная аналитика использования</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>6. Конфиденциальность детей</h2>
-                <p>Мы сознательно не собираем личную информацию от детей младше 13 лет.</p>
-            </div>
-            <div class="section">
-                <h2>7. Права пользователей (GDPR)</h2>
-                <p>Вы имеете право:</p>
-                <ul>
-                    <li>Получить доступ к своим данным</li>
-                    <li>Запросить исправление своих данных</li>
-                    <li>Запросить удаление своих данных</li>
-                    <li>Возражать против обработки данных</li>
-                    <li>Переносимость данных</li>
-                </ul>
-                <p>Контакт: <strong>support@lernlang.app</strong></p>
-            </div>
-            <div class="section">
-                <h2>8. Изменения</h2>
-                <p>Мы можем время от времени обновлять эту политику. О существенных изменениях будет сообщено через приложение.</p>
-            </div>
-            <div class="section">
-                <h2>9. Контакт</h2>
-                <p>По вопросам: <strong>support@lernlang.app</strong></p>
+                <h2>9. Kontakt</h2>
+                <p>Po voprosam: <strong>support@lernlang.app</strong></p>
             </div>
         </div>
 
         <!-- CHINESE -->
         <div id="zh" class="lang-content">
-            <div class="section">
-                <h2>1. 简介</h2>
-                <p>LernLang（"我们"、"我们的"、"应用程序"）尊重您的隐私。本政策说明在您使用我们的应用程序时收集哪些信息以及如何使用这些信息。</p>
+            <div class="highlight">
+                <strong>摘要：</strong>LernLang不会将任何个人数据收集、存储或传输到外部服务器。您的所有学习数据都保留在您的设备上。我们没有用户账户，也不会追踪您。
             </div>
+
             <div class="section">
-                <h2>2. 收集的数据</h2>
+                <h2>1. 我们的隐私方针</h2>
+                <p>LernLang采用隐私优先的设计理念。我们认为您的学习数据属于您，应该保留在您的设备上。我们不运营任何存储用户数据的服务器，也不需要创建账户或登录。</p>
+            </div>
+
+            <div class="section">
+                <h2>2. 保留在您设备上的数据</h2>
                 <ul>
-                    <li><strong>学习进度：</strong>已完成的课程、测验结果和统计数据存储在您的设备本地。</li>
-                    <li><strong>订阅信息：</strong>高级购买由Apple/Google处理。我们无法访问您的付款信息。</li>
-                    <li><strong>使用数据：</strong>我们可能会收集匿名使用统计数据以改善应用程序性能。</li>
-                    <li><strong>广告数据：</strong>在免费版本中，广告网络可能会根据其自己的政策收集数据。</li>
+                    <li><strong>学习进度：</strong>已完成的课程、测验分数和统计数据</li>
+                    <li><strong>应用偏好：</strong>选择的语言、难度级别和设置</li>
+                    <li><strong>练习历史：</strong>您的答案和表现数据</li>
                 </ul>
+                <p>这些数据永远不会发送给我们或任何第三方。如果您删除应用，这些数据将被永久删除。</p>
             </div>
+
             <div class="section">
-                <h2>3. 数据使用</h2>
-                <p>收集的数据用于：</p>
-                <ul>
-                    <li>提供个性化学习体验</li>
-                    <li>改善应用程序性能</li>
-                    <li>诊断技术问题</li>
-                    <li>生成匿名统计数据</li>
-                </ul>
+                <h2>3. 订阅付款</h2>
+                <p>高级订阅完全由Apple（App Store）或Google（Play Store）处理。我们永远不会看到、收集或访问您的付款详情。</p>
             </div>
+
             <div class="section">
-                <h2>4. 数据存储</h2>
-                <p>您的学习数据存储在您的设备本地。传输到我们服务器的任何数据都受到加密保护。</p>
+                <h2>4. 广告</h2>
+                <p>LernLang的免费版本通过Google AdMob展示广告。广告网络可能会收集某些设备信息以展示相关广告。高级订阅用户不会看到任何广告。您可以通过设备设置限制广告追踪。</p>
             </div>
+
             <div class="section">
                 <h2>5. 第三方服务</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing：订阅处理</li>
-                    <li>Google AdMob：广告展示（免费版本）</li>
-                    <li>Firebase Analytics：匿名使用分析</li>
+                    <li><strong>Apple App Store / Google Play Store：</strong>仅用于订阅处理</li>
+                    <li><strong>Google AdMob：</strong>仅用于免费版本的广告展示</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. 儿童隐私</h2>
-                <p>我们不会故意收集13岁以下儿童的个人信息。</p>
+                <h2>6. 儿童</h2>
+                <p>LernLang是一款适合所有年龄段的语言学习应用。由于我们不收集任何个人数据，因此不会从任何用户（包括儿童）处收集个人信息。使用应用不需要账户、电子邮件、姓名或年龄。</p>
             </div>
+
             <div class="section">
-                <h2>7. 用户权利</h2>
-                <p>您有权：</p>
+                <h2>7. 您的权利</h2>
+                <p>由于所有数据都存储在您的设备本地，您拥有完全控制权：</p>
                 <ul>
-                    <li>访问您的数据</li>
-                    <li>请求更正您的数据</li>
-                    <li>请求删除您的数据</li>
-                    <li>反对数据处理</li>
-                    <li>数据可移植性</li>
+                    <li>您可以在应用设置中重置进度</li>
+                    <li>您可以通过卸载应用删除所有数据</li>
                 </ul>
-                <p>联系方式：<strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. 变更</h2>
-                <p>我们可能会不时更新本政策。重大变更将通过应用程序通知。</p>
+                <p>如果我们更新此政策，更改将反映在此页面上。重大变更将通过应用通知。</p>
             </div>
+
             <div class="section">
                 <h2>9. 联系方式</h2>
                 <p>如有问题：<strong>support@lernlang.app</strong></p>
@@ -601,61 +623,62 @@
 
         <!-- ARABIC -->
         <div id="ar" class="lang-content" dir="rtl">
-            <div class="section">
-                <h2>1. مقدمة</h2>
-                <p>تحترم LernLang ("نحن"، "تطبيقنا") خصوصيتك. توضح هذه السياسة المعلومات التي يتم جمعها عند استخدام تطبيقنا وكيفية استخدامها.</p>
+            <div class="highlight">
+                <strong>ملخص:</strong> لا يقوم LernLang بجمع أو تخزين أو نقل أي بيانات شخصية إلى خوادم خارجية. جميع بيانات التعلم الخاصة بك تبقى على جهازك. ليس لدينا حسابات مستخدمين ولا نتتبعك.
             </div>
+
             <div class="section">
-                <h2>2. البيانات المجمعة</h2>
+                <h2>1. نهجنا في الخصوصية</h2>
+                <p>تم تصميم LernLang بنهج الخصوصية أولاً. نعتقد أن بيانات التعلم الخاصة بك ملك لك ويجب أن تبقى على جهازك. لا نشغل أي خوادم تخزن بيانات المستخدمين ولا نطلب إنشاء حساب أو تسجيل دخول.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. البيانات التي تبقى على جهازك</h2>
                 <ul>
-                    <li><strong>تقدم التعلم:</strong> يتم تخزين الدروس المكتملة ونتائج الاختبارات والإحصائيات محلياً على جهازك.</li>
-                    <li><strong>معلومات الاشتراك:</strong> تتم معالجة المشتريات المميزة بواسطة Apple/Google. ليس لدينا وصول إلى معلومات الدفع الخاصة بك.</li>
-                    <li><strong>بيانات الاستخدام:</strong> قد نجمع إحصائيات استخدام مجهولة لتحسين أداء التطبيق.</li>
-                    <li><strong>بيانات الإعلانات:</strong> في النسخة المجانية، قد تجمع شبكات الإعلانات البيانات وفقاً لسياساتها الخاصة.</li>
+                    <li><strong>تقدم التعلم:</strong> الدروس المكتملة ونتائج الاختبارات والإحصائيات</li>
+                    <li><strong>تفضيلات التطبيق:</strong> اللغة المختارة ومستوى الصعوبة والإعدادات</li>
+                    <li><strong>سجل التمارين:</strong> إجاباتك وبيانات الأداء</li>
                 </ul>
+                <p>لا يتم إرسال هذه البيانات أبداً إلينا أو إلى أي طرف ثالث. إذا حذفت التطبيق، يتم حذف هذه البيانات نهائياً.</p>
             </div>
+
             <div class="section">
-                <h2>3. استخدام البيانات</h2>
-                <p>تُستخدم البيانات المجمعة من أجل:</p>
-                <ul>
-                    <li>توفير تجربة تعلم مخصصة</li>
-                    <li>تحسين أداء التطبيق</li>
-                    <li>تشخيص المشكلات التقنية</li>
-                    <li>إنشاء إحصائيات مجهولة</li>
-                </ul>
+                <h2>3. مدفوعات الاشتراك</h2>
+                <p>تتم معالجة الاشتراكات المميزة بالكامل بواسطة Apple أو Google. لا نرى أو نجمع أو نصل إلى تفاصيل الدفع الخاصة بك.</p>
             </div>
+
             <div class="section">
-                <h2>4. تخزين البيانات</h2>
-                <p>يتم تخزين بيانات التعلم الخاصة بك محلياً على جهازك. البيانات المنقولة إلى خوادمنا محمية بالتشفير.</p>
+                <h2>4. الإعلانات</h2>
+                <p>تعرض النسخة المجانية إعلانات عبر Google AdMob. قد تجمع شبكة الإعلانات معلومات معينة عن الجهاز لعرض إعلانات ذات صلة. لا يرى المشتركون المميزون أي إعلانات.</p>
             </div>
+
             <div class="section">
                 <h2>5. خدمات الطرف الثالث</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: معالجة الاشتراكات</li>
-                    <li>Google AdMob: عرض الإعلانات (النسخة المجانية)</li>
-                    <li>Firebase Analytics: تحليلات الاستخدام المجهولة</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> فقط لمعالجة الاشتراكات</li>
+                    <li><strong>Google AdMob:</strong> فقط لعرض الإعلانات في النسخة المجانية</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. خصوصية الأطفال</h2>
-                <p>لا نجمع عن قصد معلومات شخصية من الأطفال دون سن 13 عاماً.</p>
+                <h2>6. الأطفال</h2>
+                <p>LernLang هو تطبيق لتعلم اللغات مناسب لجميع الأعمار. نظراً لأننا لا نجمع أي بيانات شخصية، لا يتم جمع معلومات شخصية من أي مستخدم بما في ذلك الأطفال. لا يتطلب استخدام التطبيق حساباً أو بريداً إلكترونياً أو اسماً أو عمراً.</p>
             </div>
+
             <div class="section">
-                <h2>7. حقوق المستخدم</h2>
-                <p>لديك الحق في:</p>
+                <h2>7. حقوقك</h2>
+                <p>نظراً لأن جميع البيانات مخزنة محلياً على جهازك، لديك التحكم الكامل:</p>
                 <ul>
-                    <li>الوصول إلى بياناتك</li>
-                    <li>طلب تصحيح بياناتك</li>
-                    <li>طلب حذف بياناتك</li>
-                    <li>الاعتراض على معالجة البيانات</li>
-                    <li>نقل البيانات</li>
+                    <li>يمكنك إعادة تعيين تقدمك من إعدادات التطبيق</li>
+                    <li>يمكنك حذف جميع البيانات بإلغاء تثبيت التطبيق</li>
                 </ul>
-                <p>للتواصل: <strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. التغييرات</h2>
-                <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إخطار التغييرات الهامة عبر التطبيق.</p>
+                <p>إذا قمنا بتحديث هذه السياسة، ستنعكس التغييرات على هذه الصفحة. سيتم إبلاغ التغييرات المهمة عبر التطبيق.</p>
             </div>
+
             <div class="section">
                 <h2>9. الاتصال</h2>
                 <p>للاستفسارات: <strong>support@lernlang.app</strong></p>
@@ -664,61 +687,62 @@
 
         <!-- FARSI -->
         <div id="fa" class="lang-content" dir="rtl">
-            <div class="section">
-                <h2>1. مقدمه</h2>
-                <p>LernLang ("ما"، "برنامه") به حریم خصوصی شما احترام می‌گذارد. این سیاست توضیح می‌دهد چه اطلاعاتی هنگام استفاده از برنامه ما جمع‌آوری می‌شود و چگونه استفاده می‌شود.</p>
+            <div class="highlight">
+                <strong>خلاصه:</strong> LernLang هیچ داده شخصی را به سرورهای خارجی جمع‌آوری، ذخیره یا ارسال نمی‌کند. تمام داده‌های یادگیری شما روی دستگاهتان باقی می‌ماند. ما حساب کاربری نداریم و شما را ردیابی نمی‌کنیم.
             </div>
+
             <div class="section">
-                <h2>2. داده‌های جمع‌آوری شده</h2>
+                <h2>1. رویکرد ما به حریم خصوصی</h2>
+                <p>LernLang با رویکرد حریم خصوصی در اولویت طراحی شده است. ما معتقدیم داده‌های یادگیری شما متعلق به شماست و باید روی دستگاهتان بماند. ما هیچ سروری که داده‌های کاربران را ذخیره کند اداره نمی‌کنیم و نیازی به ایجاد حساب کاربری نیست.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. داده‌هایی که روی دستگاه شما می‌مانند</h2>
                 <ul>
-                    <li><strong>پیشرفت یادگیری:</strong> درس‌های تکمیل شده، نتایج آزمون و آمار به صورت محلی در دستگاه شما ذخیره می‌شود.</li>
-                    <li><strong>اطلاعات اشتراک:</strong> خریدهای پریمیوم توسط Apple/Google پردازش می‌شود. ما به اطلاعات پرداخت شما دسترسی نداریم.</li>
-                    <li><strong>داده‌های استفاده:</strong> ممکن است آمار استفاده ناشناس را برای بهبود عملکرد برنامه جمع‌آوری کنیم.</li>
-                    <li><strong>داده‌های تبلیغاتی:</strong> در نسخه رایگان، شبکه‌های تبلیغاتی ممکن است طبق سیاست‌های خود داده جمع‌آوری کنند.</li>
+                    <li><strong>پیشرفت یادگیری:</strong> درس‌های تکمیل شده، نمرات آزمون و آمار</li>
+                    <li><strong>تنظیمات برنامه:</strong> زبان انتخاب شده، سطح دشواری و تنظیمات</li>
+                    <li><strong>تاریخچه تمرین:</strong> پاسخ‌ها و داده‌های عملکرد شما</li>
                 </ul>
+                <p>این داده‌ها هرگز به ما یا هیچ شخص ثالثی ارسال نمی‌شود. اگر برنامه را حذف کنید، این داده‌ها برای همیشه حذف می‌شوند.</p>
             </div>
+
             <div class="section">
-                <h2>3. استفاده از داده‌ها</h2>
-                <p>داده‌های جمع‌آوری شده برای موارد زیر استفاده می‌شود:</p>
-                <ul>
-                    <li>ارائه تجربه یادگیری شخصی‌سازی شده</li>
-                    <li>بهبود عملکرد برنامه</li>
-                    <li>تشخیص مشکلات فنی</li>
-                    <li>ایجاد آمار ناشناس</li>
-                </ul>
+                <h2>3. پرداخت‌های اشتراک</h2>
+                <p>اشتراک‌های پریمیوم کاملاً توسط Apple یا Google پردازش می‌شوند. ما هرگز اطلاعات پرداخت شما را نمی‌بینیم، جمع‌آوری نمی‌کنیم یا به آن دسترسی نداریم.</p>
             </div>
+
             <div class="section">
-                <h2>4. ذخیره‌سازی داده‌ها</h2>
-                <p>داده‌های یادگیری شما به صورت محلی در دستگاه شما ذخیره می‌شود. داده‌های منتقل شده به سرورهای ما با رمزگذاری محافظت می‌شود.</p>
+                <h2>4. تبلیغات</h2>
+                <p>نسخه رایگان تبلیغات را از طریق Google AdMob نمایش می‌دهد. شبکه تبلیغاتی ممکن است اطلاعات خاصی از دستگاه را برای نمایش تبلیغات مرتبط جمع‌آوری کند. مشترکین پریمیوم هیچ تبلیغاتی نمی‌بینند.</p>
             </div>
+
             <div class="section">
                 <h2>5. خدمات شخص ثالث</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing: پردازش اشتراک</li>
-                    <li>Google AdMob: نمایش تبلیغات (نسخه رایگان)</li>
-                    <li>Firebase Analytics: تحلیل استفاده ناشناس</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> فقط برای پردازش اشتراک</li>
+                    <li><strong>Google AdMob:</strong> فقط برای نمایش تبلیغات در نسخه رایگان</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. حریم خصوصی کودکان</h2>
-                <p>ما آگاهانه اطلاعات شخصی از کودکان زیر 13 سال جمع‌آوری نمی‌کنیم.</p>
+                <h2>6. کودکان</h2>
+                <p>LernLang یک برنامه یادگیری زبان مناسب برای همه سنین است. از آنجا که ما هیچ داده شخصی جمع‌آوری نمی‌کنیم، هیچ اطلاعات شخصی از هیچ کاربری از جمله کودکان دریافت نمی‌شود. برای استفاده از برنامه نیازی به حساب کاربری، ایمیل، نام یا سن نیست.</p>
             </div>
+
             <div class="section">
-                <h2>7. حقوق کاربر</h2>
-                <p>شما حق دارید:</p>
+                <h2>7. حقوق شما</h2>
+                <p>از آنجا که تمام داده‌ها به صورت محلی روی دستگاه شما ذخیره می‌شوند، کنترل کامل در دست شماست:</p>
                 <ul>
-                    <li>به داده‌های خود دسترسی داشته باشید</li>
-                    <li>درخواست اصلاح داده‌های خود کنید</li>
-                    <li>درخواست حذف داده‌های خود کنید</li>
-                    <li>به پردازش داده‌ها اعتراض کنید</li>
-                    <li>قابلیت انتقال داده</li>
+                    <li>می‌توانید پیشرفت خود را از تنظیمات برنامه بازنشانی کنید</li>
+                    <li>می‌توانید با حذف برنامه تمام داده‌ها را پاک کنید</li>
                 </ul>
-                <p>تماس: <strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. تغییرات</h2>
-                <p>ممکن است این سیاست را گاه به گاه به‌روز کنیم. تغییرات مهم از طریق برنامه اطلاع‌رسانی خواهد شد.</p>
+                <p>اگر این سیاست را به‌روزرسانی کنیم، تغییرات در این صفحه منعکس خواهد شد. تغییرات مهم از طریق برنامه اطلاع‌رسانی خواهد شد.</p>
             </div>
+
             <div class="section">
                 <h2>9. تماس</h2>
                 <p>برای سوالات: <strong>support@lernlang.app</strong></p>
@@ -727,61 +751,62 @@
 
         <!-- JAPANESE -->
         <div id="ja" class="lang-content">
-            <div class="section">
-                <h2>1. はじめに</h2>
-                <p>LernLang（「私たち」、「当社」、「アプリ」）はお客様のプライバシーを尊重します。このポリシーは、当社のアプリケーションを使用する際に収集される情報とその使用方法について説明します。</p>
+            <div class="highlight">
+                <strong>概要：</strong>LernLangは個人データを外部サーバーに収集、保存、送信しません。すべての学習データはお使いのデバイスに保存されます。ユーザーアカウントはなく、追跡も行いません。
             </div>
+
             <div class="section">
-                <h2>2. 収集するデータ</h2>
+                <h2>1. プライバシーへの取り組み</h2>
+                <p>LernLangはプライバシーファーストのアプローチで設計されています。お客様の学習データはお客様のものであり、デバイスに保存されるべきだと考えています。ユーザーデータを保存するサーバーは運用しておらず、アカウント作成やログインは不要です。</p>
+            </div>
+
+            <div class="section">
+                <h2>2. デバイスに保存されるデータ</h2>
                 <ul>
-                    <li><strong>学習の進捗：</strong>完了したレッスン、クイズの結果、統計はデバイスにローカルで保存されます。</li>
-                    <li><strong>サブスクリプション情報：</strong>プレミアム購入はApple/Googleによって処理されます。お支払い情報にはアクセスできません。</li>
-                    <li><strong>使用データ：</strong>アプリのパフォーマンスを向上させるために、匿名の使用統計を収集する場合があります。</li>
-                    <li><strong>広告データ：</strong>無料版では、広告ネットワークが独自のポリシーに従ってデータを収集する場合があります。</li>
+                    <li><strong>学習の進捗：</strong>完了したレッスン、クイズのスコア、統計</li>
+                    <li><strong>アプリの設定：</strong>選択した言語、難易度、設定</li>
+                    <li><strong>練習履歴：</strong>回答とパフォーマンスデータ</li>
                 </ul>
+                <p>これらのデータは当社や第三者に送信されることはありません。アプリを削除すると、これらのデータは完全に削除されます。</p>
             </div>
+
             <div class="section">
-                <h2>3. データの使用</h2>
-                <p>収集されたデータは以下の目的で使用されます：</p>
-                <ul>
-                    <li>パーソナライズされた学習体験の提供</li>
-                    <li>アプリのパフォーマンスの向上</li>
-                    <li>技術的な問題の診断</li>
-                    <li>匿名統計の生成</li>
-                </ul>
+                <h2>3. サブスクリプションの支払い</h2>
+                <p>プレミアムサブスクリプションはApple（App Store）またはGoogle（Play Store）によって完全に処理されます。お支払い情報を見たり、収集したり、アクセスしたりすることはありません。</p>
             </div>
+
             <div class="section">
-                <h2>4. データの保存</h2>
-                <p>学習データはデバイスにローカルで保存されます。サーバーに送信されるデータは暗号化で保護されています。</p>
+                <h2>4. 広告</h2>
+                <p>LernLangの無料版はGoogle AdMobを通じて広告を表示します。広告ネットワークは関連性の高い広告を表示するために特定のデバイス情報を収集する場合があります。プレミアム会員は広告を見ることはありません。</p>
             </div>
+
             <div class="section">
                 <h2>5. サードパーティサービス</h2>
                 <ul>
-                    <li>Apple StoreKit / Google Play Billing：サブスクリプション処理</li>
-                    <li>Google AdMob：広告表示（無料版）</li>
-                    <li>Firebase Analytics：匿名の使用分析</li>
+                    <li><strong>Apple App Store / Google Play Store：</strong>サブスクリプション処理のみ</li>
+                    <li><strong>Google AdMob：</strong>無料版の広告表示のみ</li>
                 </ul>
             </div>
+
             <div class="section">
-                <h2>6. 子供のプライバシー</h2>
-                <p>13歳未満の子供から故意に個人情報を収集することはありません。</p>
+                <h2>6. お子様について</h2>
+                <p>LernLangはすべての年齢層に適した言語学習アプリです。個人データを一切収集しないため、お子様を含むいかなるユーザーからも個人情報は収集されません。アプリの使用にアカウント、メール、名前、年齢は必要ありません。</p>
             </div>
+
             <div class="section">
-                <h2>7. ユーザーの権利</h2>
-                <p>以下の権利があります：</p>
+                <h2>7. お客様の権利</h2>
+                <p>すべてのデータがデバイスにローカルで保存されているため、完全な管理権はお客様にあります：</p>
                 <ul>
-                    <li>データへのアクセス</li>
-                    <li>データの訂正の要求</li>
-                    <li>データの削除の要求</li>
-                    <li>データ処理への異議申し立て</li>
-                    <li>データポータビリティ</li>
+                    <li>アプリの設定から進捗をリセットできます</li>
+                    <li>アプリをアンインストールしてすべてのデータを削除できます</li>
                 </ul>
-                <p>連絡先：<strong>support@lernlang.app</strong></p>
             </div>
+
             <div class="section">
                 <h2>8. 変更</h2>
-                <p>このポリシーは随時更新される場合があります。重要な変更はアプリ内で通知されます。</p>
+                <p>このポリシーを更新した場合、変更はこのページに反映されます。重要な変更はアプリ内で通知されます。</p>
             </div>
+
             <div class="section">
                 <h2>9. お問い合わせ</h2>
                 <p>ご質問は：<strong>support@lernlang.app</strong></p>
@@ -791,11 +816,8 @@
 
     <script>
         function showLang(lang) {
-            // Hide all content
             document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-
-            // Show selected
             document.getElementById(lang).classList.add('active');
             event.target.classList.add('active');
         }
