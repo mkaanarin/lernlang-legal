@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - LernLang</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #f5f5f7;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0 0 10px 0; font-size: 2em; }
+        .subtitle { opacity: 0.7; font-size: 14px; }
+        .lang-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .lang-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255,255,255,0.2);
+            border-color: white;
+        }
+        .section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #1a1a2e;
+            margin-top: 0;
+            font-size: 1.3em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .faq-item {
+            margin-bottom: 16px;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .faq-a {
+            color: #555;
+            margin-left: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        label {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 14px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d1d6;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            background: #fafafa;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #007aff;
+            background: white;
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        .submit-btn {
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .submit-btn:hover { opacity: 0.9; }
+        .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .success-msg {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #86868b;
+            font-size: 13px;
+        }
+        .footer a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1 id="page-title">Support</h1>
+    <div class="subtitle" id="page-subtitle">We're here to help you with any questions or issues.</div>
+    <div class="lang-selector">
+        <button class="lang-btn active" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
+        <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+        <button class="lang-btn" onclick="setLang('es')">Español</button>
+        <button class="lang-btn" onclick="setLang('fr')">Français</button>
+        <button class="lang-btn" onclick="setLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="setLang('ru')">Русский</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+        <button class="lang-btn" onclick="setLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="setLang('fa')">فارسی</button>
+        <button class="lang-btn" onclick="setLang('ja')">日本語</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+    <div id="faq-content"></div>
+</div>
+
+<div class="section">
+    <h2 id="contact-title">Contact Us</h2>
+    <p id="contact-desc">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+    <form id="support-form" onsubmit="return submitForm(event)">
+        <div>
+            <label id="label-name" for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label id="label-email" for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label id="label-topic" for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+                <option value="" id="opt-select">-- Select --</option>
+                <option value="bug" id="opt-bug">Bug Report</option>
+                <option value="subscription" id="opt-sub">Subscription Issue</option>
+                <option value="content" id="opt-content">Content / Translation Error</option>
+                <option value="feature" id="opt-feature">Feature Request</option>
+                <option value="account" id="opt-account">Account / Data</option>
+                <option value="other" id="opt-other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label id="label-device" for="device">Device & OS Version</label>
+            <input type="text" id="device" name="device" placeholder="e.g. iPhone 15, iOS 18.2">
+        </div>
+        <div>
+            <label id="label-message" for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">Send</button>
+    </form>
+
+    <div class="success-msg" id="success-msg">Your message has been sent successfully. We'll get back to you soon!</div>
+</div>
+
+<div class="footer">
+    <p>LernLang &copy; 2026 Mustafa Kaan Arın</p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms of Use</a> ·
+        <a href="index.html">Home</a>
+    </p>
+</div>
+
+<script>
+const translations = {
+    en: {
+        title: "Support",
+        subtitle: "We're here to help you with any questions or issues.",
+        faqTitle: "Frequently Asked Questions",
+        contactTitle: "Contact Us",
+        contactDesc: "Fill out the form below and we'll get back to you as soon as possible.",
+        labelName: "Name", labelEmail: "Email", labelTopic: "Topic",
+        labelDevice: "Device & OS Version", labelMessage: "Message",
+        submitBtn: "Send",
+        optSelect: "-- Select --", optBug: "Bug Report", optSub: "Subscription Issue",
+        optContent: "Content / Translation Error", optFeature: "Feature Request",
+        optAccount: "Account / Data", optOther: "Other",
+        successMsg: "Your message has been sent successfully. We'll get back to you soon!",
+        faq: [
+            { q: "How do I cancel my subscription?", a: "Go to Settings > Apple ID > Subscriptions on your iPhone, find LernLang, and tap Cancel Subscription." },
+            { q: "Can I use the app offline?", a: "Yes! All grammar exercises, vocabulary, and content work offline. Speaking practice requires an internet connection for speech recognition." },
+            { q: "How does the level assessment work?", a: "Our adaptive test asks 18 questions across CEFR levels A1-C2 (3 per level). It adjusts based on your performance and determines your proficiency level." },
+            { q: "I found a translation error. What should I do?", a: "Please use the contact form below and select 'Content / Translation Error'. Include the language, level, and the specific error you found." },
+            { q: "How do I restore my purchase?", a: "Your subscription is linked to your Apple ID. Simply sign in with the same Apple ID and your premium access will be restored automatically." },
+            { q: "Which languages are supported?", a: "LernLang supports 11 languages: English, Turkish, German, Spanish, French, Italian, Russian, Chinese, Arabic, Persian, and Japanese." }
+        ]
+    },
+    tr: {
+        title: "Destek",
+        subtitle: "Sorularınız veya sorunlarınız için buradayız.",
+        faqTitle: "Sık Sorulan Sorular",
+        contactTitle: "Bize Ulaşın",
+        contactDesc: "Aşağıdaki formu doldurun, en kısa sürede size dönüş yapacağız.",
+        labelName: "İsim", labelEmail: "E-posta", labelTopic: "Konu",
+        labelDevice: "Cihaz & İşletim Sistemi", labelMessage: "Mesaj",
+        submitBtn: "Gönder",
+        optSelect: "-- Seçiniz --", optBug: "Hata Bildirimi", optSub: "Abonelik Sorunu",
+        optContent: "İçerik / Çeviri Hatası", optFeature: "Özellik İsteği",
+        optAccount: "Hesap / Veri", optOther: "Diğer",
+        successMsg: "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız!",
+        faq: [
+            { q: "Aboneliğimi nasıl iptal edebilirim?", a: "iPhone'unuzda Ayarlar > Apple ID > Abonelikler bölümüne gidin, LernLang'ı bulun ve Aboneliği İptal Et'e dokunun." },
+            { q: "Uygulamayı çevrimdışı kullanabilir miyim?", a: "Evet! Tüm gramer alıştırmaları, kelime ve içerikler çevrimdışı çalışır. Konuşma pratiği, konuşma tanıma için internet bağlantısı gerektirir." },
+            { q: "Seviye belirleme nasıl çalışır?", a: "Adaptif testimiz A1-C2 CEFR seviyelerinde 18 soru sorar (seviye başına 3). Performansınıza göre ayarlanır ve yeterlilik seviyenizi belirler." },
+            { q: "Bir çeviri hatası buldum. Ne yapmalıyım?", a: "Lütfen aşağıdaki iletişim formunu kullanın ve 'İçerik / Çeviri Hatası' seçin. Dili, seviyeyi ve bulduğunuz hatayı belirtin." },
+            { q: "Satın almamı nasıl geri yüklerim?", a: "Aboneliğiniz Apple ID'nize bağlıdır. Aynı Apple ID ile giriş yapmanız yeterlidir, premium erişiminiz otomatik olarak geri yüklenecektir." },
+            { q: "Hangi diller destekleniyor?", a: "LernLang 11 dili destekler: İngilizce, Türkçe, Almanca, İspanyolca, Fransızca, İtalyanca, Rusça, Çince, Arapça, Farsça ve Japonca." }
+        ]
+    },
+    de: {
+        title: "Support",
+        subtitle: "Wir sind hier, um Ihnen bei Fragen oder Problemen zu helfen.",
+        faqTitle: "Häufig gestellte Fragen",
+        contactTitle: "Kontaktieren Sie uns",
+        contactDesc: "Füllen Sie das Formular aus und wir melden uns so schnell wie möglich.",
+        labelName: "Name", labelEmail: "E-Mail", labelTopic: "Thema",
+        labelDevice: "Gerät & Betriebssystem", labelMessage: "Nachricht",
+        submitBtn: "Senden",
+        optSelect: "-- Auswählen --", optBug: "Fehlerbericht", optSub: "Abo-Problem",
+        optContent: "Inhalt / Übersetzungsfehler", optFeature: "Feature-Anfrage",
+        optAccount: "Konto / Daten", optOther: "Sonstiges",
+        successMsg: "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bald!",
+        faq: [
+            { q: "Wie kündige ich mein Abo?", a: "Gehen Sie zu Einstellungen > Apple ID > Abonnements, finden Sie LernLang und tippen Sie auf Abo kündigen." },
+            { q: "Kann ich die App offline nutzen?", a: "Ja! Alle Grammatikübungen, Vokabeln und Inhalte funktionieren offline. Sprechübungen erfordern eine Internetverbindung." },
+            { q: "Welche Sprachen werden unterstützt?", a: "LernLang unterstützt 11 Sprachen: Englisch, Türkisch, Deutsch, Spanisch, Französisch, Italienisch, Russisch, Chinesisch, Arabisch, Persisch und Japanisch." }
+        ]
+    },
+    es: {
+        title: "Soporte", subtitle: "Estamos aquí para ayudarte.", faqTitle: "Preguntas Frecuentes",
+        contactTitle: "Contáctenos", contactDesc: "Complete el formulario y le responderemos lo antes posible.",
+        labelName: "Nombre", labelEmail: "Correo", labelTopic: "Tema",
+        labelDevice: "Dispositivo y SO", labelMessage: "Mensaje", submitBtn: "Enviar",
+        optSelect: "-- Seleccionar --", optBug: "Reporte de Error", optSub: "Problema de Suscripción",
+        optContent: "Error de Contenido / Traducción", optFeature: "Solicitud de Función",
+        optAccount: "Cuenta / Datos", optOther: "Otro",
+        successMsg: "Su mensaje ha sido enviado exitosamente.", faq: []
+    },
+    fr: {
+        title: "Support", subtitle: "Nous sommes là pour vous aider.", faqTitle: "Questions Fréquentes",
+        contactTitle: "Contactez-nous", contactDesc: "Remplissez le formulaire et nous vous répondrons dès que possible.",
+        labelName: "Nom", labelEmail: "E-mail", labelTopic: "Sujet",
+        labelDevice: "Appareil et OS", labelMessage: "Message", submitBtn: "Envoyer",
+        optSelect: "-- Sélectionner --", optBug: "Rapport de Bug", optSub: "Problème d'Abonnement",
+        optContent: "Erreur de Contenu / Traduction", optFeature: "Demande de Fonctionnalité",
+        optAccount: "Compte / Données", optOther: "Autre",
+        successMsg: "Votre message a été envoyé avec succès.", faq: []
+    },
+    it: {
+        title: "Supporto", subtitle: "Siamo qui per aiutarti.", faqTitle: "Domande Frequenti",
+        contactTitle: "Contattaci", contactDesc: "Compila il modulo e ti risponderemo il prima possibile.",
+        labelName: "Nome", labelEmail: "Email", labelTopic: "Argomento",
+        labelDevice: "Dispositivo e SO", labelMessage: "Messaggio", submitBtn: "Invia",
+        optSelect: "-- Seleziona --", optBug: "Segnalazione Bug", optSub: "Problema Abbonamento",
+        optContent: "Errore Contenuto / Traduzione", optFeature: "Richiesta Funzionalità",
+        optAccount: "Account / Dati", optOther: "Altro",
+        successMsg: "Il tuo messaggio è stato inviato con successo.", faq: []
+    },
+    ru: {
+        title: "Поддержка", subtitle: "Мы здесь, чтобы помочь вам.", faqTitle: "Часто задаваемые вопросы",
+        contactTitle: "Свяжитесь с нами", contactDesc: "Заполните форму, и мы ответим как можно скорее.",
+        labelName: "Имя", labelEmail: "Электронная почта", labelTopic: "Тема",
+        labelDevice: "Устройство и ОС", labelMessage: "Сообщение", submitBtn: "Отправить",
+        optSelect: "-- Выбрать --", optBug: "Сообщение об ошибке", optSub: "Проблема с подпиской",
+        optContent: "Ошибка контента / перевода", optFeature: "Запрос функции",
+        optAccount: "Аккаунт / Данные", optOther: "Другое",
+        successMsg: "Ваше сообщение успешно отправлено.", faq: []
+    },
+    zh: {
+        title: "支持", subtitle: "我们在这里帮助您。", faqTitle: "常见问题",
+        contactTitle: "联系我们", contactDesc: "填写表格，我们会尽快回复您。",
+        labelName: "姓名", labelEmail: "电子邮件", labelTopic: "主题",
+        labelDevice: "设备和操作系统", labelMessage: "消息", submitBtn: "发送",
+        optSelect: "-- 选择 --", optBug: "错误报告", optSub: "订阅问题",
+        optContent: "内容/翻译错误", optFeature: "功能请求",
+        optAccount: "账户/数据", optOther: "其他",
+        successMsg: "您的消息已成功发送。", faq: []
+    },
+    ar: {
+        title: "الدعم", subtitle: "نحن هنا لمساعدتك.", faqTitle: "الأسئلة الشائعة",
+        contactTitle: "اتصل بنا", contactDesc: "املأ النموذج وسنرد عليك في أقرب وقت.",
+        labelName: "الاسم", labelEmail: "البريد الإلكتروني", labelTopic: "الموضوع",
+        labelDevice: "الجهاز ونظام التشغيل", labelMessage: "الرسالة", submitBtn: "إرسال",
+        optSelect: "-- اختر --", optBug: "تقرير خطأ", optSub: "مشكلة اشتراك",
+        optContent: "خطأ في المحتوى / الترجمة", optFeature: "طلب ميزة",
+        optAccount: "الحساب / البيانات", optOther: "أخرى",
+        successMsg: "تم إرسال رسالتك بنجاح.", faq: []
+    },
+    fa: {
+        title: "پشتیبانی", subtitle: "ما اینجا هستیم تا به شما کمک کنیم.", faqTitle: "سوالات متداول",
+        contactTitle: "تماس با ما", contactDesc: "فرم را پر کنید و ما در اسرع وقت پاسخ خواهیم داد.",
+        labelName: "نام", labelEmail: "ایمیل", labelTopic: "موضوع",
+        labelDevice: "دستگاه و سیستم عامل", labelMessage: "پیام", submitBtn: "ارسال",
+        optSelect: "-- انتخاب --", optBug: "گزارش خطا", optSub: "مشکل اشتراک",
+        optContent: "خطای محتوا / ترجمه", optFeature: "درخواست ویژگی",
+        optAccount: "حساب / داده‌ها", optOther: "سایر",
+        successMsg: "پیام شما با موفقیت ارسال شد.", faq: []
+    },
+    ja: {
+        title: "サポート", subtitle: "ご質問やお困りの際はお気軽にどうぞ。", faqTitle: "よくある質問",
+        contactTitle: "お問い合わせ", contactDesc: "フォームにご記入ください。できるだけ早くご返信いたします。",
+        labelName: "お名前", labelEmail: "メールアドレス", labelTopic: "件名",
+        labelDevice: "デバイスとOS", labelMessage: "メッセージ", submitBtn: "送信",
+        optSelect: "-- 選択 --", optBug: "バグ報告", optSub: "サブスクリプションの問題",
+        optContent: "コンテンツ/翻訳エラー", optFeature: "機能リクエスト",
+        optAccount: "アカウント/データ", optOther: "その他",
+        successMsg: "メッセージが正常に送信されました。", faq: []
+    }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+    currentLang = lang;
+    const t = translations[lang] || translations.en;
+
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    document.getElementById('page-title').textContent = t.title;
+    document.getElementById('page-subtitle').textContent = t.subtitle;
+    document.getElementById('faq-title').textContent = t.faqTitle;
+    document.getElementById('contact-title').textContent = t.contactTitle;
+    document.getElementById('contact-desc').textContent = t.contactDesc;
+    document.getElementById('label-name').textContent = t.labelName;
+    document.getElementById('label-email').textContent = t.labelEmail;
+    document.getElementById('label-topic').textContent = t.labelTopic;
+    document.getElementById('label-device').textContent = t.labelDevice;
+    document.getElementById('label-message').textContent = t.labelMessage;
+    document.getElementById('submit-btn').textContent = t.submitBtn;
+    document.getElementById('opt-select').textContent = t.optSelect;
+    document.getElementById('opt-bug').textContent = t.optBug;
+    document.getElementById('opt-sub').textContent = t.optSub;
+    document.getElementById('opt-content').textContent = t.optContent;
+    document.getElementById('opt-feature').textContent = t.optFeature;
+    document.getElementById('opt-account').textContent = t.optAccount;
+    document.getElementById('opt-other').textContent = t.optOther;
+    document.getElementById('success-msg').textContent = t.successMsg;
+
+    // RTL support
+    document.body.dir = (lang === 'ar' || lang === 'fa') ? 'rtl' : 'ltr';
+
+    // FAQ
+    const faqContent = document.getElementById('faq-content');
+    const faqs = t.faq.length > 0 ? t.faq : translations.en.faq;
+    faqContent.innerHTML = faqs.map(f =>
+        `<div class="faq-item"><div class="faq-q">${f.q}</div><div class="faq-a">${f.a}</div></div>`
+    ).join('');
+}
+
+function submitForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('support-form');
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    const data = new FormData(form);
+
+    fetch('https://formspree.io/f/xeoqgwkr', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = 'none';
+            document.getElementById('success-msg').style.display = 'block';
+        } else {
+            // Fallback: mailto
+            const name = data.get('name');
+            const email = data.get('email');
+            const topic = data.get('topic');
+            const device = data.get('device');
+            const message = data.get('message');
+            const subject = encodeURIComponent(`[LernLang Support] ${topic}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDevice: ${device}\n\n${message}`);
+            window.location.href = `mailto:destek@lernlang.app?subject=${subject}&body=${body}`;
+            btn.disabled = false;
+            const t = translations[currentLang] || translations.en;
+            btn.textContent = t.submitBtn;
+        }
+    }).catch(() => {
+        const name = data.get('name');
+        const email = data.get('email');
+        const topic = data.get('topic');
+        const device = data.get('device');
+        const message = data.get('message');
+        const subject = encodeURIComponent(`[LernLang Support] ${topic}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDevice: ${device}\n\n${message}`);
+        window.location.href = `mailto:destek@lernlang.app?subject=${subject}&body=${body}`;
+        btn.disabled = false;
+        const t = translations[currentLang] || translations.en;
+        btn.textContent = t.submitBtn;
+    });
+
+    return false;
+}
+
+// Init
+setLang('en');
+</script>
+
+</body>
+</html>
