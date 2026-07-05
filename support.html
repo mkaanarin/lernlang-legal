@@ -174,7 +174,6 @@
             <select id="topic" name="topic" required>
                 <option value="" id="opt-select">-- Select --</option>
                 <option value="bug" id="opt-bug">Bug Report</option>
-                <option value="subscription" id="opt-sub">Subscription Issue</option>
                 <option value="content" id="opt-content">Content / Translation Error</option>
                 <option value="feature" id="opt-feature">Feature Request</option>
                 <option value="account" id="opt-account">Account / Data</option>
@@ -220,11 +219,9 @@ const translations = {
         optAccount: "Account / Data", optOther: "Other",
         successMsg: "Your message has been sent successfully. We'll get back to you soon!",
         faq: [
-            { q: "How do I cancel my subscription?", a: "Go to Settings > Apple ID > Subscriptions on your iPhone, find LernLang, and tap Cancel Subscription." },
             { q: "Can I use the app offline?", a: "Yes! All grammar exercises, vocabulary, and content work offline. Speaking practice requires an internet connection for speech recognition." },
             { q: "How does the level assessment work?", a: "Our adaptive test asks 18 questions across CEFR levels A1-C2 (3 per level). It adjusts based on your performance and determines your proficiency level." },
             { q: "I found a translation error. What should I do?", a: "Please use the contact form below and select 'Content / Translation Error'. Include the language, level, and the specific error you found." },
-            { q: "How do I restore my purchase?", a: "Your subscription is linked to your Apple ID. Simply sign in with the same Apple ID and your premium access will be restored automatically." },
             { q: "Which languages are supported?", a: "LernLang supports 11 languages: English, Turkish, German, Spanish, French, Italian, Russian, Chinese, Arabic, Persian, and Japanese." }
         ]
     },
@@ -242,11 +239,9 @@ const translations = {
         optAccount: "Hesap / Veri", optOther: "Diğer",
         successMsg: "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız!",
         faq: [
-            { q: "Aboneliğimi nasıl iptal edebilirim?", a: "iPhone'unuzda Ayarlar > Apple ID > Abonelikler bölümüne gidin, LernLang'ı bulun ve Aboneliği İptal Et'e dokunun." },
             { q: "Uygulamayı çevrimdışı kullanabilir miyim?", a: "Evet! Tüm gramer alıştırmaları, kelime ve içerikler çevrimdışı çalışır. Konuşma pratiği, konuşma tanıma için internet bağlantısı gerektirir." },
             { q: "Seviye belirleme nasıl çalışır?", a: "Adaptif testimiz A1-C2 CEFR seviyelerinde 18 soru sorar (seviye başına 3). Performansınıza göre ayarlanır ve yeterlilik seviyenizi belirler." },
             { q: "Bir çeviri hatası buldum. Ne yapmalıyım?", a: "Lütfen aşağıdaki iletişim formunu kullanın ve 'İçerik / Çeviri Hatası' seçin. Dili, seviyeyi ve bulduğunuz hatayı belirtin." },
-            { q: "Satın almamı nasıl geri yüklerim?", a: "Aboneliğiniz Apple ID'nize bağlıdır. Aynı Apple ID ile giriş yapmanız yeterlidir, premium erişiminiz otomatik olarak geri yüklenecektir." },
             { q: "Hangi diller destekleniyor?", a: "LernLang 11 dili destekler: İngilizce, Türkçe, Almanca, İspanyolca, Fransızca, İtalyanca, Rusça, Çince, Arapça, Farsça ve Japonca." }
         ]
     },
@@ -264,7 +259,6 @@ const translations = {
         optAccount: "Konto / Daten", optOther: "Sonstiges",
         successMsg: "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bald!",
         faq: [
-            { q: "Wie kündige ich mein Abo?", a: "Gehen Sie zu Einstellungen > Apple ID > Abonnements, finden Sie LernLang und tippen Sie auf Abo kündigen." },
             { q: "Kann ich die App offline nutzen?", a: "Ja! Alle Grammatikübungen, Vokabeln und Inhalte funktionieren offline. Sprechübungen erfordern eine Internetverbindung." },
             { q: "Welche Sprachen werden unterstützt?", a: "LernLang unterstützt 11 Sprachen: Englisch, Türkisch, Deutsch, Spanisch, Französisch, Italienisch, Russisch, Chinesisch, Arabisch, Persisch und Japanisch." }
         ]
@@ -373,7 +367,6 @@ function setLang(lang) {
     document.getElementById('submit-btn').textContent = t.submitBtn;
     document.getElementById('opt-select').textContent = t.optSelect;
     document.getElementById('opt-bug').textContent = t.optBug;
-    document.getElementById('opt-sub').textContent = t.optSub;
     document.getElementById('opt-content').textContent = t.optContent;
     document.getElementById('opt-feature').textContent = t.optFeature;
     document.getElementById('opt-account').textContent = t.optAccount;
